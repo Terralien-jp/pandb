@@ -1,0 +1,55 @@
+#container {
+    width:900px;
+    margin:0 auto;
+}
+a {
+    text-decoration: none;
+    color: blue;
+}
+a:hover {
+    background-color: coral;
+}
+
+/* ヘッダー部分 */
+#header {
+    margin-top: 15px;
+    margin-bottom: 10px;
+    border-bottom: 1px blue solid;
+}
+#header_title {
+    text-align: center;
+}
+#header_user {
+    text-align: right;
+}
+
+/* ナビ部分 */
+#nav {
+    background-color:pink;
+    width:190px;
+    float:left;
+}
+#nav ul {
+    margin: 0;
+    padding: 0;
+}
+#nav li {
+    list-style-type: none;
+    padding: 10px;
+    background-color: #ccccff;
+}
+
+/* メイン部分 */
+#main {
+    background-color:cyan;
+    width:700px;
+    float:right;
+}
+
+/* フッター部分 */
+#footer {
+    background-color: #ccccff;
+    clear:both;
+    text-align: center;
+    padding: 5px;
+}
