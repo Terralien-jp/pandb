@@ -1,3 +1,7 @@
+<?php 
+    $user_name="平敦盛";
+ ?>
+
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -12,7 +16,7 @@
         <div id="header">
             <img src="images/logo.gif">
             <div id="header-title">在庫管理システム</div>
-            <div id="header_user">●●様</div>
+            <div id="header_user"><? $user_name ?>様</div>
         </div>
         <div id="nav">
             <ul>
@@ -70,11 +74,11 @@
                 </th>
             </tr>
             <tr>
-                <td>1</td>
+                <td class="num">1</td>
                 <td>強力粉</td>
-                <td>25kg</td>
+                <td class="num">25kg</td>
                 <td>パン生地の材料</td>
-                <td>3</td>
+                <td class="num"><? $n1 ?></td>
                 <td>食パン・バターロール・ピザ向き</td>
             </tr>
             <tr>
@@ -82,7 +86,7 @@
                 <td>薄力粉</td>
                 <td>25kg</td>
                 <td>パン生地の材料</td>
-                <td>4</td>
+                <td><? $n1 ?></td>
                 <td>メロンパンの外生地・クッキー・マフィン</td>
             </tr>
             <tr>
@@ -90,7 +94,7 @@
                 <td>ドライイースト</td>
                 <td>1kg</td>
                 <td>パン生地の材料</td>
-                <td>7</td>
+                <td><? $n1 ?></td>
                 <td>予備発酵なし</td>
             </tr>
         </table>
