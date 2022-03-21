@@ -2,4 +2,4 @@
 JMOOCの課題
 https://platjam.jmooc.jp/database/
 
-現在第1章8回
+2022-03-21 第2章3回
