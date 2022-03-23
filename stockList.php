@@ -1,5 +1,10 @@
 <?php 
     $user_name="平敦盛";
+    $stock_id = array(4, 5, 6);
+    $stock_name = array("バター", "ショートニング", "スキムミルク", );
+    $amount = array("450g", "15g", "25g");
+    $n = array(9, 5, 3);
+    $remarks = array("無塩", "バターロール", "揚げパン");
  ?>
 
 <!DOCTYPE html>
@@ -74,28 +79,28 @@
                 </th>
             </tr>
             <tr>
-                <td class="num">1</td>
-                <td>強力粉</td>
-                <td class="num">25kg</td>
+                <td class="num"><?= $stock_id[0] ?></td>
+                <td><?= $stock_name[0] ?></td>
+                <td class="num"><?= $amount[0] ?></td>
                 <td>パン生地の材料</td>
-                <td class="num"><? $n1 ?></td>
-                <td>食パン・バターロール・ピザ向き</td>
+                <td class="num"><? $n[0] ?></td>
+                <td><?= $remarks[0] ?></td>
             </tr>
             <tr>
-                <td>2</td>
-                <td>薄力粉</td>
-                <td>25kg</td>
+                <td class="num"><?= $stock_id[1] ?></td>
+                <td><?= $stock_name[1] ?></td>
+                <td><?= $amount[1] ?></td>
                 <td>パン生地の材料</td>
-                <td><? $n1 ?></td>
-                <td>メロンパンの外生地・クッキー・マフィン</td>
+                <td><? $n[1] ?></td>
+                <td><?= $remarks[1] ?></td>
             </tr>
             <tr>
-                <td>3</td>
-                <td>ドライイースト</td>
-                <td>1kg</td>
+                <td class="num"><?= $stock_id[2] ?></td>
+                <td><?= $stock_name[2] ?></td>
+                <td><?= $amount[2] ?></td>
                 <td>パン生地の材料</td>
-                <td><? $n1 ?></td>
-                <td>予備発酵なし</td>
+                <td><? $n[2] ?></td>
+                <td><?= $remarks[2] ?></td>
             </tr>
         </table>
     </div>
