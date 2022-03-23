@@ -21,7 +21,7 @@
         <div id="header">
             <img src="images/logo.gif">
             <div id="header-title">在庫管理システム</div>
-            <div id="header_user"><? $user_name ?>様</div>
+            <div id="header_user"><?= $user_name ?>様</div>
         </div>
         <div id="nav">
             <ul>
@@ -83,23 +83,23 @@
                 <td><?= $stock_name[0] ?></td>
                 <td class="num"><?= $amount[0] ?></td>
                 <td>パン生地の材料</td>
-                <td class="num"><? $n[0] ?></td>
+                <td class="num"><?= $n[0] ?></td>
                 <td><?= $remarks[0] ?></td>
             </tr>
             <tr>
                 <td class="num"><?= $stock_id[1] ?></td>
-                <td><?= $stock_name[1] ?></td>
+                <td class="num"><?= $stock_name[1] ?></td>
                 <td><?= $amount[1] ?></td>
                 <td>パン生地の材料</td>
-                <td><? $n[1] ?></td>
+                <td class="num"><?= $n[1] ?></td>
                 <td><?= $remarks[1] ?></td>
             </tr>
             <tr>
                 <td class="num"><?= $stock_id[2] ?></td>
                 <td><?= $stock_name[2] ?></td>
-                <td><?= $amount[2] ?></td>
+                <td class="num"><?= $amount[2] ?></td>
                 <td>パン生地の材料</td>
-                <td><? $n[2] ?></td>
+                <td class="num"><?= $n[2] ?></td>
                 <td><?= $remarks[2] ?></td>
             </tr>
         </table>
