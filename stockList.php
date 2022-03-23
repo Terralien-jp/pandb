@@ -1,10 +1,26 @@
 <?php 
     $user_name="平敦盛";
-    $stock_id = array(4, 5, 6);
-    $stock_name = array("バター", "ショートニング", "スキムミルク", );
-    $amount = array("450g", "15g", "25g");
-    $n = array(9, 5, 3);
-    $remarks = array("無塩", "バターロール", "揚げパン");
+    $stock_data[] = array(
+        "stock_id" => 1,
+        "stock_name" => "バター",
+        "amount" => "450g",
+        "n" => 9,
+        "remarks" => "食パン・バターロール・ピザ向き"
+    );
+    $stock_data[] = array(
+        "stock_id" => 2,
+        "stock_name" => "強力粉",
+        "amount" => "25kg",
+        "n" => 3,
+        "remarks" => "メロンパンの外生地・クッキー・マフィン"
+    );
+    $stock_data[] = array(
+        "stock_id" => 3,
+        "stock_name" => "薄力粉",
+        "amount" => "15kg",
+        "n" => 4,
+        "remarks" => "無塩"
+    );
  ?>
 
 <!DOCTYPE html>
@@ -79,28 +95,28 @@
                 </th>
             </tr>
             <tr>
-                <td class="num"><?= $stock_id[0] ?></td>
-                <td><?= $stock_name[0] ?></td>
-                <td class="num"><?= $amount[0] ?></td>
+                <td class="num"><?= $stock_data[0]["stock_id"] ?></td>
+                <td><?= $stock_data[0]["stock_name"] ?></td>
+                <td class="num"><?= $stock_data[0]["amount"] ?></td>
                 <td>パン生地の材料</td>
-                <td class="num"><?= $n[0] ?></td>
-                <td><?= $remarks[0] ?></td>
+                <td class="num"><?= $stock_data[0]["n"] ?></td>
+                <td><?= $stock_data[0]["remarks"] ?></td>
             </tr>
             <tr>
-                <td class="num"><?= $stock_id[1] ?></td>
-                <td class="num"><?= $stock_name[1] ?></td>
-                <td><?= $amount[1] ?></td>
+            <td class="num"><?= $stock_data[1]["stock_id"] ?></td>
+                <td><?= $stock_data[1]["stock_name"] ?></td>
+                <td class="num"><?= $stock_data[1]["amount"] ?></td>
                 <td>パン生地の材料</td>
-                <td class="num"><?= $n[1] ?></td>
-                <td><?= $remarks[1] ?></td>
+                <td class="num"><?= $stock_data[1]["n"] ?></td>
+                <td><?= $stock_data[1]["remarks"] ?></td>
             </tr>
             <tr>
-                <td class="num"><?= $stock_id[2] ?></td>
-                <td><?= $stock_name[2] ?></td>
-                <td class="num"><?= $amount[2] ?></td>
+            <td class="num"><?= $stock_data[2]["stock_id"] ?></td>
+                <td><?= $stock_data[2]["stock_name"] ?></td>
+                <td class="num"><?= $stock_data[2]["amount"] ?></td>
                 <td>パン生地の材料</td>
-                <td class="num"><?= $n[2] ?></td>
-                <td><?= $remarks[2] ?></td>
+                <td class="num"><?= $stock_data[2]["n"] ?></td>
+                <td><?= $stock_data[2]["remarks"] ?></td>
             </tr>
         </table>
     </div>
