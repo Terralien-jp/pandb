@@ -1,26 +1,6 @@
 <?php 
+    include "stockData.php";
     $user_name="平敦盛";
-    $stock_data[] = array(
-        "stock_id" => 1,
-        "stock_name" => "バター",
-        "amount" => "450g",
-        "n" => 9,
-        "remarks" => "食パン・バターロール・ピザ向き"
-    );
-    $stock_data[] = array(
-        "stock_id" => 2,
-        "stock_name" => "強力粉",
-        "amount" => "25kg",
-        "n" => 3,
-        "remarks" => "メロンパンの外生地・クッキー・マフィン"
-    );
-    $stock_data[] = array(
-        "stock_id" => 3,
-        "stock_name" => "薄力粉",
-        "amount" => "15kg",
-        "n" => 4,
-        "remarks" => "無塩"
-    );
  ?>
 
 <!DOCTYPE html>
