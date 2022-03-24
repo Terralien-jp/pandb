@@ -15,19 +15,19 @@
             <table>
             <tr>
                 <th>社員番号</th>
-                <td><?= $_POST[ "user_number" ] ?></td>
+                <td><?= $_POST["user_number"] ?></td>
             </tr>
             <tr>
                 <th>氏名</th>
-                <td><?= $_POST[ "user_name" ] ?></td>
+                <td><?= $_POST["user_name"] ?></td>
             </tr>
             <tr>
                 <th>パスワード</th>
-                <td><?= $_POST[ "user_password" ] ?></td>
+                <td><?= $_POST["user_password"] ?></td>
             </tr>
             <tr>
                 <th>パスワード確認</th>
-                <td><?= $_POST[ "user_password2" ] ?></td>
+                <td><?= $_POST["user_password2"] ?></td>
             </tr>
             <tr>
                 <th colspan="2"><input type="submit" value="新規登録"></th>
