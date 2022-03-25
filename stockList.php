@@ -1,7 +1,83 @@
 <?php 
     include "stockData.php";
     $user_name="平敦盛";
- ?>
+
+    $mode = 0;
+?>
+
+<?php
+    if($mode == 0) {
+?>
+        <div id="main_title">在庫一覧</div>
+<?php
+    }
+    else if ($mode ==1) {
+?>
+        <div id="main_title">入庫（仕入れ）</div>
+<?php
+    }
+    else {
+?>
+        <div id="main_title">出庫（消費）</div>
+<?php
+    }
+?>
+
+<?php
+    if($mode == 0) {
+?>
+        <th>備考</th>
+<?php
+    }
+    else if($mode == 1) {
+?>
+        <th>入庫個数</th>
+<?php
+    }
+    else {
+?>
+    <th>出庫個数</th>
+<?php
+    }
+?>
+
+<?php
+    if($mode == 0) {
+?>
+    <td><?= $val["remarks"] ?></td>
+<?php
+    }
+    else {
+?>
+    <td class="center_elements">
+        <input type="text" size="4" name="<?= $val["stock_id"] ?>">
+    </td>
+<?php
+    }
+?>
+
+<?php
+    if($mode == 1) {
+?>
+    <div class="right_elements"><input type="submit" value="入庫"></div>
+<?php
+    }
+    else if($mode == 2) {
+?>
+    <div class="right_elements"><input type="submit" value="出庫"></div>
+<?php
+    }
+?>
+
+<?php
+    if(isset($_GET['m']))
+{
+    $mode = $_GET['m'];
+}
+else{
+    $mode = 0;
+}
+?>
 
 <!DOCTYPE html>
 <html lang="ja">
@@ -25,17 +101,17 @@
                     メニュー選択
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="stockList.php?m=0">
                         在庫一覧
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="stockList.php?m=1">
                         入庫（仕入れ）
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="stockList.php?m=2">
                         出庫（消費）
                     </a>
                 </li>

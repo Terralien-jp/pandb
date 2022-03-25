@@ -69,3 +69,11 @@ a:hover {
     text-align: center;
     padding: 5px;
 }
+
+.center_elements {
+    text-align: center;
+}
+
+.right_elements {
+    text-align: right;
+}
