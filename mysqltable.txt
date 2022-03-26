@@ -1,0 +1,10 @@
+CREATE TABLE sotckUser(
+    user_id INT AUTO_INCREMENT ,
+    user_number VERCHER(10) NOT NULL ,
+    user_name TEXT NOT NULL ,
+    user_password VARCHER(20) NOT NULL ,
+    enable TINIINT(1) NOT NULL ,
+
+    PRIMARY KEY(user_id) ,
+    UNIQUE KEY(user_number)
+);
