@@ -1,3 +1,5 @@
+<!-- Worningが出力するがPHPのバージョンによるものである -->
+
 <?php 
     include "stockData.php";
     $user_name="平敦盛";
