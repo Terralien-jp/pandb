@@ -28,3 +28,21 @@ CREATE TABLE stockLog(
 
     PRIMARY KEY(log_id)
 );
+
+insert into stockList (stock_name , amount , type , remarks)
+values ("stock1" , "25kg" , 1 , "");
+
+insert into stockList (stock_name , amount , type , remarks)
+values ("stock2" , "25kg" , 1 , "");
+
+insert into stockList (stock_name , amount , type , remarks)
+values ("stock3" , "25kg" , 1 , "");
+
+insert into stockLog (stock_id , user_id , in_out_n , update_date)
+values (1 , 2 , 10 , "2019-04-01 10:00:00");
+
+# レコードの変更（下記は全部変更される）
+update stockList set type=2;
+
+# レコードのデリート（下記は全部消える）
+delete from stockList;
