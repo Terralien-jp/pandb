@@ -1,22 +1,37 @@
 <?php
     include "dbConnect.php";
 
-    $user_number = $_POST["user_namber"];
+    $user_number = $_POST["user_number"];
     $user_password = $_POST["user_password"];
 
     $sql = "SELECT * FROM stockUser WHERE user_number = '$user_number' AND ";
     $sql .= " user_password = '$user_password'";
 
-    if(4result = mysqli_query($conn, $sql)) {
-        if(4row = mysqli_fetch_assoc($result)) {
-            echo "ログインＯＫ" . $row["user_name"] . "様";
+    if($result = mysqli_query($conn, $sql)) {
+        if($row = mysqli_fetch_assoc($result)) {
+            // echo "ログインＯＫ" . $row["user_name"] . "様";
+            $flag = true;
         }
         else {
-            echo "ログインＮＧ";
+            // echo "ログインＮＧ";
+            $flag = false;
         }
     }
     else {
         echo mysqli_error($conn) . "<br>";
     }
     mysqli_close($conn);
+
+    $host = $_SERVER['HTTP_HOST'];
+    $uri = rtrim(dirname($_SERVER['PHP_SELF']), '/\\');
+    if($flag) {
+        $extra = "stockList.php";
+        header("Location: hhp://$host$uri/$extra");
+        exit();
+    }
+    else {
+        $extra = "index2.html";
+        header("Location: hhp://$host$uri/$extra");
+        exit();
+    }
 ?>
