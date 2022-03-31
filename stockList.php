@@ -1,7 +1,23 @@
 <!-- Worningが出力するがPHPのバージョンによるものである -->
 
 <?php 
-    include "stockData.php";
+    // include "stockData.php";
+    include "dbConnect.php"
+
+    $sql = "SELECT * FROM stockList";
+    if($type > 0)
+    {
+        $sql .= " WHERE type=$type";
+    }
+    echo $sql;
+    
+    if($result = mysqli_query($conn, $sql)) {
+
+    }
+    else {
+        echo mysqli_error($conn). "<br>";
+    }
+
     $user_name="平敦盛";
 
     $mode = 0;
@@ -72,12 +88,12 @@
 ?>
 
 <?php
-    if(isset($_GET['m']))
+    if(isset($_POST['type_select']))
 {
-    $mode = $_GET['m'];
+    $type = $_POST['type_select'];
 }
 else{
-    $mode = 0;
+    $type = 0;
 }
 ?>
 
@@ -121,13 +137,60 @@ else{
         </div>
         <div id="main">
         <div id="main_title">在庫一覧</div>
-        <form action="stockList.html" method="post">
+        <form action="stockList.php" method="post">
             種類の選択：<select name="type_select">
+        <?php
+            if($type == 0){
+        ?>
                 <option value="0" selected>すべて</option>
-                <option value="1">パン生地の材料</option>
+        <?php
+            }
+            else{
+        ?>
+                <option value="0">すべて</option>
+        <?php
+            }
+            if($type == 1){
+        ?>
+                <option value="1" selected>パン生地の材料</option>
+        <?php
+            }
+            else{
+        ?>
+                <option value="1" >パン生地の材料</option>
+        <?php
+            }
+            if($type == 2){
+        ?>
+                <option value="2" selected>ドライフルーツ</option>
+        <?php
+            }
+            else{
+        ?>
                 <option value="2">ドライフルーツ</option>
+        <?php
+            }
+            if($type == 3){
+        ?>
+                <option value="3" selected>調味料</option>
+        <?php
+            }
+            else{
+        ?>
                 <option value="3">調味料</option>
+        <?php
+            }
+            if($type == 4){
+        ?>
+                <option value="4" selected>和菓子の材料</option>
+                <?php
+            }
+            else{
+        ?>
                 <option value="4">和菓子の材料</option>
+        <?php
+            }
+        ?>
             </select>
             <input type="submit" value="切り替え">
         </form>
@@ -153,13 +216,26 @@ else{
                 </th>
             </tr>
 <?php
-    foreach( $stock_data as $val ) {
+    // foreach( $stock_data as $val ) {
+        while($val = mysqli_fetch_assocc($result)) {
+            if($val["type"] ==1) {
+                $type_s ="パン生地の材料"
+            }
+            if($val["type"] == 2) {
+                $type_s ="ドライフルーツ"
+            }
+            if($val["type"] == 3) {
+                $type_s ="調味料"
+            }
+            if($val["type"] == 4) {
+                $type_s ="和菓子の材料"
+            }
 ?>
             <tr>
                 <td class="num"><?= $val["stock_id"] ?></td>
                 <td><?= $val["stock_name"] ?></td>
                 <td class="num"><?= $val["amount"] ?></td>
-                <td>パン生地の材料</td>
+                <td><?= $type_s ?></td>
                 <td class="num"><?= $val["n"] ?></td>
                 <td><?= $val["remarks"] ?></td>
             </tr>

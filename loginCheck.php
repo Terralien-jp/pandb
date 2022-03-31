@@ -26,12 +26,12 @@
     $uri = rtrim(dirname($_SERVER['PHP_SELF']), '/\\');
     if($flag) {
         $extra = "stockList.php";
-        header("Location: hhp://$host$uri/$extra");
+        header("Location: http://$host$uri/$extra");
         exit();
     }
     else {
         $extra = "index2.html";
-        header("Location: hhp://$host$uri/$extra");
+        header("Location: http://$host$uri/$extra");
         exit();
     }
 ?>
