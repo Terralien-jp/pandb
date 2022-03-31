@@ -11,11 +11,13 @@
         echo mysqli_connect_error();
     }
     else {
-        echo "connect OK";
+        echo "connect OK<br>";
     }
 
 // $sql ="INSERT INTO stockUser (user_number, user_name, user_password, enable)";
 // $sql ="VALUES ('A13', '毘沙門太郎', '111', 1)";
+//     echo $sql;
+
 //     if($result = mysqli_query($conn, $sql)){
 //         echo "insert OK<br>";
 //     }
@@ -32,9 +34,10 @@ $sql = "SELECT * FROM stockUser";
     else {
         echo "select NG";
     }
+
 while($row = mysqli_fetch_assoc($result)){
     echo $row['user_id'] . "," .$row['user_number'] . "," .$row['user_name'] . "," . $row["user_password"] . "<br>";
 }
     mysqli_close($conn);
     ?>
-    finish
+    finished
